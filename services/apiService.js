@@ -5,14 +5,10 @@ var querystring = require('querystring');
 
 module.exports = (function() {
     function ApiService() {
-        this.headers = {
-            'Cookie': '_gv_lang=ru; _uz_cart_personal_email=rassel1996%40gmail.com; _gat_mobile=1;'
-        };
-
         this.post = function(path, data, options) {
             var localOptions = {
                 method: 'POST',
-                formData: data
+                form: data
             };
 
             return this.callApi(path, _.extend(options, localOptions))
@@ -30,7 +26,6 @@ module.exports = (function() {
         this.callApi = function(path, options) {
             options = _.extend(options, {
                 url: 'http://booking.uz.gov.ua/ru/mobile' + path,
-                headers: this.headers
             });
 
             return Rx.Observable.create(function (observer) {
@@ -46,3 +41,4 @@ module.exports = (function() {
 
     return new ApiService;
 });
+

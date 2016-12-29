@@ -1,8 +1,12 @@
 {
-  "name": "application-name",
+  "name": "ukraineRailwayConsole",
   "version": "0.0.1",
   "dependencies": {
+    "argparse": "^1.0.9",
+    "colors": "^1.1.2",
     "lodash": "^4.17.3",
-    "moment": "^2.17.1"
+    "moment": "^2.17.1",
+    "readline-sync": "^1.4.5",
+    "rx": "^4.1.0"
   }
 }

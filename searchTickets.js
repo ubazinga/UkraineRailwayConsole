@@ -65,12 +65,13 @@ Rx.Observable.create((observer) => {
             travelDateFormated = travelDate ? moment(travelDate, 'DD.MM.YYYY').format('YYYY-MM-DD') : moment().format('YYYY-MM-DD');
 
         var trainsOptions = {
-            date: travelDateFormated,
+            date: '2017-01-02',
             from: stationFrom.value,
             time: '00:00',
-            to: stationTo.value
+            to: stationTo.value,
+            get_tpl: false,
         };
-
+        
         console.info(colors.blue(`> Поиск мест со станции ${colors.bold(stationFrom.label)} до станции ${colors.bold(stationTo.label)} на ${colors.bold(travelDate)} число`));
 
         tranisService.search(trainsOptions).subscribe(function(findedTrains) {

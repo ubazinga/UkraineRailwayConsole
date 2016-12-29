@@ -5,7 +5,7 @@ var apiService = require('./apiService')();
 module.exports = (function() {
     function TrainsService() {
         this.search = function(data) {
-            return apiService.post('/train_search/', data).map(function(response) {
+            return apiService.post('/train_search/', data).map((response) => {
                 return response.data.list;
             });
         }
