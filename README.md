@@ -2,4 +2,4 @@
 Поиск железнодорожных билетов из консоли
 
 ![Поиск железнодорожных билетов из консоли]
-(http://i.imgur.com/undefined.png)
+(http://i.imgur.com/DG7gWgL.png)
